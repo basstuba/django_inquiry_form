@@ -48,3 +48,4 @@
 ## その他
 - アプリの追加はsrc/appsにする
 - アプリ追加後、settings.pyのINSTALLED_APPSに'apps.core',のように追記
+- アプリ追加後、アプリ/apps.pyのnameも'apps.core'のようにsettings.pyのINSTALLED_APPSと揃える
