@@ -35,8 +35,8 @@
     ```
     python manage.py migrate
     ```
-[!Note]
-**アプリの追加とマイグレーションはdjangoコンテナ内で実行**
+> [!Note]
+> **アプリの追加とマイグレーションはdjangoコンテナ内で実行**
 
 ## その他
 - アプリの追加はsrc/appsにする
