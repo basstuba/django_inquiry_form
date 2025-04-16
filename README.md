@@ -3,23 +3,30 @@
 ## 使用方法
 
 1. 任意のディレクトリにクローン作成
-2. コンテナ作成
     ```
-    docker compose up -d --build
+    git clone git@github.com:basstuba/Django_sample.git
     ```
-3. djangoコンテナに下記のコマンドで入る
+2. リポジトリ名変更
     ```
-    docker compose exec django bash
+    mv Django_sample 新しいリポジトリ名
     ```
-4. .env作成
+3. .env作成
     ```
     cp .env.example .env
     ```
-5. シークレットキー作成
+4. コンテナ作成
+    ```
+    docker compose up -d --build
+    ```
+5. djangoコンテナに下記のコマンドで入る
+    ```
+    docker compose exec django bash
+    ```
+6. シークレットキー作成
     ```
     python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
     ```
-6. 作成したシークレットキーを.envのSECRET_KEYの値にコピペ
+7. 作成したシークレットキーを.envのSECRET_KEYの値にコピペ
 
 ## 各種コマンド
 
