@@ -16,11 +16,11 @@
     ```
 4. コンテナ作成
     ```
-    docker compose up -d --build
+    make up
     ```
 5. djangoコンテナに下記のコマンドで入る
     ```
-    docker compose exec django bash
+    make shell
     ```
 6. シークレットキー作成
     ```
@@ -28,22 +28,17 @@
     ```
 7. 作成したシークレットキーを.envのSECRET_KEYの値にコピペ
 
+## ローカル環境に仮想環境を作成（VS Code の補完・警告解消の用のため任意）
+
+- 下記のコマンドで作成
+    ```
+    make venv
+    ```
+- VS Codeを再起動して、VS Code下部のPythonバージョンを **.venv** のものに設定
+
 ## 各種コマンド
 
-- アプリを追加
-    ```
-    python manage.py startapp アプリ名
-    ```
-- ディレクトリの移動
-    ```
-    mv 移動させたいディレクトリのパス 移動先のパス
-    ```
-- マイグレーション
-    ```
-    python manage.py migrate
-    ```
-> [!Note]
-> **アプリの追加とマイグレーションはdjangoコンテナ内で実行**
+- Makefile参照
 
 ## その他
 - アプリの追加はsrc/appsにする
