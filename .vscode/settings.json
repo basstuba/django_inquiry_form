@@ -3,4 +3,5 @@
   "python.analysis.extraPaths": ["src"],
   "python.analysis.autoSearchPaths": true,
   "python.analysis.useLibraryCodeForTypes": true,
+  "makefile.configureOnOpen": false
 }
