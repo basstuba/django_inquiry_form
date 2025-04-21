@@ -9,6 +9,10 @@ APP?=yourappname
 # Django コンテナでコマンドを実行する
 exec := docker compose exec django
 
+# シークレットキー作成
+secretkey:
+	$(exec) python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+
 # アプリ作成（例: make APP=core createapp）
 createapp:
 	$(exec) python manage.py startapp $(APP) apps/$(APP)

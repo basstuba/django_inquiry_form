@@ -18,23 +18,19 @@
     ```
     make up
     ```
-5. djangoコンテナに下記のコマンドで入る
+5. シークレットキー作成
     ```
-    make shell
+    make secretkey
     ```
-6. シークレットキー作成
-    ```
-    python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
-    ```
-7. 作成したシークレットキーを.envのSECRET_KEYの値にコピペ
+6. 作成したシークレットキーを.envのSECRET_KEYの値にコピペ
 
 ## ローカル環境に仮想環境を作成（VS Code の補完・警告解消の用のため任意）
 
-- 下記のコマンドで作成
+1. 下記のコマンドで作成
     ```
     make venv
     ```
-- VS Codeを再起動して、VS Code下部のPythonバージョンを **.venv** のものに設定
+2. VS Codeを再起動して、VS Code下部のPythonバージョンを **.venv** のものに設定
 
 ## 各種コマンド
 
