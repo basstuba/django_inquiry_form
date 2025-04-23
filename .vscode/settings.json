@@ -3,5 +3,9 @@
   "python.analysis.extraPaths": ["src"],
   "python.analysis.autoSearchPaths": true,
   "python.analysis.useLibraryCodeForTypes": true,
-  "makefile.configureOnOpen": false
+  "makefile.configureOnOpen": false,
+  "htmlhint.enable": false,
+  "files.associations": {
+    "*.html": "django-html"
+  }
 }
