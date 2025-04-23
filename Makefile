@@ -1,7 +1,7 @@
 # 仮想環境作成
 venv:
 	python3 -m venv .venv
-	. .venv/bin/activate && pip install --upgrade pip && pip install django
+	. .venv/bin/activate && pip install --upgrade pip && pip install django django-debug-toolbar
 
 # アプリ名は make APP=yourappname createapp のように使う
 APP?=yourappname
