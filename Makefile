@@ -15,7 +15,8 @@ secretkey:
 
 # アプリ作成（例: make APP=core createapp）
 createapp:
-	$(exec) python manage.py startapp $(APP) apps/$(APP)
+	mkdir -p src/apps
+	docker compose exec django bash -c "cd apps && django-admin startapp $(APP)"
 
 # マイグレーションファイル作成
 makemigrations:
