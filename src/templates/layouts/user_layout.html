@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionablyLate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Inika:wght@400;700&family=Noto+Sans+Hebrew:wght@100..900&display=swap" />
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" href="{% static 'css/user_layout.css' %}">
+    {% block extraheader %}{% endblock %}
+</head>
+<body>
+    <header claas="header">
+        <h1 class="header-title">FashionablyLate</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="footer">
+        <div class="copyright">&copy;TAKAYOSHI SHIOYA</div>
+    </footer>
+</body>
+</html>

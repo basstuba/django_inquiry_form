@@ -17,5 +17,14 @@
   "html.validate.scripts": false,
   "[django-html]": {
     "editor.formatOnSave": false
-  }
+  },
+  "cSpell.words": [
+    "claas",
+    "extraheader",
+    "gethostname",
+    "SHIOYA",
+    "signup",
+    "stylesheet",
+    "TAKAYOSHI"
+  ]
 }

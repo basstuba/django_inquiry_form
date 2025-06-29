@@ -1,0 +1,25 @@
+{% extends "layouts/user_layout.html" %}
+
+{% block extraheader %}
+<link rel="stylesheet" href="{% static 'core/css/top.css' %}">
+{% endblock %}
+
+{% block content %}
+<div>
+    <h2></h2>
+    <div>
+        <form action="{% url 'core:top' %}">
+            {% csrf_token %}
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <button></button>
+        </form>
+    </div>
+</div>
+{% endblock %}

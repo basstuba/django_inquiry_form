@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionablyLate</title>
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/thanks.css' %}">
+</head>
+<body>
+    <div class="thanks">
+        <div class="back-logo">Thank you</div>
+        <div class="thanks-item">
+            <p class="thanks-massage">お問い合わせありがとうございました</p>
+            <div class="thanks-button">
+                <a class="thanks-button__link" href="{% url 'core:top' %}">HOME</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% extends "layouts/admin_layout.html" %}
+
+{% block extraheader %}
+    <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="auth-container">
+        <h2 class="auth-title">Login</h2>
+        <div class="auth-content">
+            <form class="auth-form" action="{% url 'accounts:login' %}" method="POST">
+                {% csrf_token %}
+                <div class="auth-item">
+                    <label class="auth-item__name" for="email">メールアドレス</label>
+                    <input class="auth-item__input" type="email" name="email" id="email"
+                        value="{{ form.email.value|default:'' }}" placeholder="例：test@example.com">
+                    {% if form.email.errors %}
+                        <div class="auth-item__error">{{ form.email.errors.0 }}</div>
+                    {% else %}
+                        <div>&nbsp;</div>
+                    {% endif %}
+                </div>
+                <div class="auth-item">
+                    <label class="auth-item__name" for="password">パスワード</label>
+                    <input class="ayth-item__input" type="password" name="password" id="password" placeholder="例：coachtech1106">
+                    {% if form.password.errors %}
+                        <div class="auth-item__error">{{ form.password.errors.0 }}</div>
+                    {% else %}
+                        <div>&nbsp;</div>
+                    {% endif %}
+                </div>
+                <button class="auth-button" type="submit">ログイン</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

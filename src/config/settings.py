@@ -43,7 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'apps.core',
+    'apps.accounts',
 ]
+
+AUTH_USER_MODEL = 'accounts.User' # 認証用モデルをカスタムユーザーモデルに設定
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

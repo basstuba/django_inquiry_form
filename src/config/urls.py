@@ -17,10 +17,14 @@ Including another URLconf
 
 from django.conf import settings
 from django.contrib import admin
+from django.shortcuts import redirect
 from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('core/', include('apps.core.urls')),
+    path('accounts/', include('apps.accounts.urls')),
+    # path('', lambda request: redirect('accounts:login')),
 ]
 
 # DEBUG モードのときだけ debug_toolbar を使う
