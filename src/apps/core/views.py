@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.decorators.http import require_http_methods
 from .forms import CreateInquiryForm
+from .models import Contact
 
 # css記述が終了したらコメントアウト解除
 # @require_http_methods(["GET", "POST"])
@@ -12,7 +13,12 @@ def top_view(request):
     else:
         form = CreateInquiryForm()
 
-    return render(request, 'core/top.html', {'form': form})
+    context = {
+        'form': form,
+        'gender_choices': Contact.GENDER_CHOICES,
+        'category_choices': Contact.CATEGORY_CHOICES,
+    }
+    return render(request, 'core/top.html', context)
 
 
 # @require_http_methods(["POST"])

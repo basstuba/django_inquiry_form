@@ -22,7 +22,7 @@
                 </div>
                 <div class="auth-item">
                     <label class="auth-item__name" for="password">パスワード</label>
-                    <input class="ayth-item__input" type="password" name="password" id="password" placeholder="例：coachtech1106">
+                    <input class="auth-item__input" type="password" name="password" id="password" placeholder="例：coachtech1106">
                     {% if form.password.errors %}
                         <div class="auth-item__error">{{ form.password.errors.0 }}</div>
                     {% else %}
