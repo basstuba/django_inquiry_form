@@ -1,4 +1,5 @@
 {% extends "layouts/user_layout.html" %}
+{% load static %}
 
 {% block extraheader %}
 <link rel="stylesheet" href="{% static 'core/css/top.css' %}">
@@ -114,7 +115,7 @@
                     <select class="category-select" name="category">
                         <option value="" hidden>選択してください</option>
                         {% for value, label in category_choices %}
-                            <option value="{{ value }}"
+                            <option value="{{ label }}"
                                 {% if form.category.value|stringsformat:"s" == value|stringsformat:"s" %}selected{% endif %}>
                                 {{ label }}
                             </option>

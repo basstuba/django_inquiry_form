@@ -1,7 +1,12 @@
 {% extends "layouts/admin_layout.html" %}
+{% load static %}
 
 {% block extraheader %}
     <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
+{% endblock %}
+
+{% block link %}
+<a class="auth-link" href="{% url 'accounts:login' %}">login</a>
 {% endblock %}
 
 {% block content %}
@@ -17,27 +22,27 @@
                     {% if form.email.errors %}
                         <div class="auth-item__error">{{ form.email.errors.0 }}</div>
                     {% else %}
-                        <div>&nbsp;</div>
+                        <div class="auth-item__space">&nbsp;</div>
                     {% endif %}
                 </div>
                 <div class="auth-item">
                     <label class="auth-item__name" for="pass1">パスワード</label>
                     <input class="auth-item__input" type="text" name="password1" id="pass1"
-                        value="{{ form.password1.value|default'' }}" placeholder="例：coachtech1106">
+                        value="{{ form.password1.value|default:'' }}" placeholder="例：coachtech1106">
                     {% if form.password1.errors %}
                         <div class="auth-item__error">{{ form.password1.errors.0 }}</div>
                     {% else %}
-                        <div>&nbsp;</div>
+                        <div class="auth-item__space">&nbsp;</div>
                     {% endif %}
                 </div>
                 <div class="auth-item">
                     <label class="auth-item__name" for="pass2">確認用パスワード</label>
                     <input class="auth-item__input" type="text" name="password2" id="pass2"
-                        value="{{ form.password2.value|default'' }}" placeholder="例：coachtech1106">
+                        value="{{ form.password2.value|default:'' }}" placeholder="例：coachtech1106">
                     {% if form.password2.errors %}
                         <div class="auth-item__error">{{ form.password2.errors.0 }}</div>
                     {% else %}
-                        <div>&nbsp;</div>
+                        <div class="auth-item__space">&nbsp;</div>
                     {% endif %}
                 </div>
                 <button class="auth-button" type="submit">登録</button>

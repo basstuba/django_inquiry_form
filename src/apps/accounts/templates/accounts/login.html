@@ -1,7 +1,12 @@
 {% extends "layouts/admin_layout.html" %}
+{% load static %}
 
 {% block extraheader %}
     <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
+{% endblock %}
+
+{% block link %}
+<a class="auth-link" href="{% url 'accounts:signup' %}">register</a>
 {% endblock %}
 
 {% block content %}
@@ -17,7 +22,7 @@
                     {% if form.email.errors %}
                         <div class="auth-item__error">{{ form.email.errors.0 }}</div>
                     {% else %}
-                        <div>&nbsp;</div>
+                        <div class="auth-item__space">&nbsp;</div>
                     {% endif %}
                 </div>
                 <div class="auth-item">
@@ -26,7 +31,7 @@
                     {% if form.password.errors %}
                         <div class="auth-item__error">{{ form.password.errors.0 }}</div>
                     {% else %}
-                        <div>&nbsp;</div>
+                        <div class="auth-item__space">&nbsp;</div>
                     {% endif %}
                 </div>
                 <button class="auth-button" type="submit">ログイン</button>

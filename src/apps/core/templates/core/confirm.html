@@ -1,0 +1,64 @@
+{% extends "layouts/user_layout.html" %}
+{% load static %}
+
+{% block extraheader %}
+<link rel="stylesheet" href="{% static 'core/css/confirm.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="confirm-container">
+    <h2 class="confirm-title">Confirm</h2>
+    <table class="confirm-table">
+        <tbody class="confirm-content">
+            <tr class="confirm-item">
+                <th class="item-label">お名前</th>
+                <td class="item-value">{{ form.cleaned_data.last_name}}&nbsp;{{ form.cleaned_data.first_name }}</td>
+            </tr>
+            <tr class="confirm-item">
+                <th class="item-label">性別</th>
+                <td class="item-value">{{ gender_label }}</td>
+            </tr>
+            <tr class="confirm-item">
+                <th class="item-label">メールアドレス</th>
+                <td class="item-value">{{ form.cleaned_data.email }}</td>
+            </tr>
+            <tr class="confirm-item">
+                <th class="item-label">電話番号</th>
+                <td class="item-value">{{ form.cleaned_data.tell }}</td>
+            </tr>
+            <tr class="confirm-item">
+                <th class="item-label">住所</th>
+                <td class="item-value">{{ form.cleaned_data.address }}</td>
+            </tr>
+            <tr class="confirm-item">
+                <th class="item-label">建物名</th>
+                <td class="item-value">{{ form.cleaned_data.building|default:'' }}</td>
+            </tr>
+            <tr class="confirm-item">
+                <th class="item-label">お問い合わせの種類</th>
+                <td class="item-value">{{ form.cleaned_data.category }}</td>
+            </tr>
+            <tr class="confirm-item">
+                <th class="item-label">お問い合わせ内容</th>
+                <td class="item-value">{{ form.cleaned_data.detail }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="button-wrapper">
+        <div class="button-inner__primary">
+            {% include "core/includes/form_action.html" with
+                action_url="core:confirm"
+                button_label="送信"
+                button_class="form-button__primary"
+            %}
+        </div>
+        <div class="button-inner__secondary">
+            {% include "core/includes/form_action.html" with
+                action_url="core:edit"
+                button_label="修正"
+                button_class="form-button__secondary"
+            %}
+        </div>
+    </div>
+</div>
+{% endblock %}

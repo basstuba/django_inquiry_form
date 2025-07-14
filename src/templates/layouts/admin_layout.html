@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    {% lord static %}
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FashionablyLate</title>
@@ -14,7 +14,7 @@
     {% block extraheader %}{% endblock %}
 </head>
 <body>
-    <header claas="header">
+    <header class="header">
         <h1 class="header-title">FashionablyLate</h1>
         <nav class="header-nav">
         {% if request.user.is_authenticated %} {# ログイン判定 #}
@@ -23,7 +23,7 @@
                 <button class="logout" type="submit">logout</button>
             </form>
         {% else %}
-            <a class="register" href="{% url 'accounts:signup' %}">register</a>
+            {% block link %}{% endblock link %}
         {% endif %}
         </nav>
     </header>
