@@ -9,114 +9,121 @@
 <div class="top-container">
     <h2 class="top-title">Contact</h2>
     <div class="top-content">
-        <form class="top-form" action="{% url 'core:top' %}">
+        <form class="top-form" action="{% url 'core:top' %}" method="POST">
             {% csrf_token %}
             <div class="top-item">
                 <div class="item-name">お名前<span class="item-required">※</span></div>
-                <div class="username-wrapper">
+                <div class="username-wrapper wrapper">
                     <div class="username-inner">
-                        <input class="username-input" type="text" name="last_name"
+                        <input class="top-item__input" type="text" name="last_name"
                             value="{{ form.last_name.value|default:'' }}" placeholder="例:山田">
                         {% if form.last_name.errors %}
                             <div class="error">{{ form.last_name.errors.0 }}</div>
                         {% else %}
-                            <div>&nbsp;</div>
+                            <div class="space">&nbsp;</div>
                         {% endif %}
                     </div>
                     <div class="username-inner">
-                        <input class="username-input" type="text" name="first_name"
+                        <input class="top-item__input" type="text" name="first_name"
                             value="{{ form.first_name.value|default:'' }}" placeholder="例:太郎">
                         {% if form.first_name.errors %}
                             <div class="error">{{ form.first_name.errors.0 }}</div>
                         {% else %}
-                            <div>&nbsp;</div>
+                            <div class="space">&nbsp;</div>
                         {% endif %}
                     </div>
                 </div>
             </div>
             <div class="top-item">
                 <div class="item-name">性別<span class="item-required">※</span></div>
-                <div class="gender-wrapper">
+                <div class="gender-wrapper wrapper">
                     {% for value, label in gender_choices %}
-                        <label class="gender-label">
-                            <input class="gender-radio" type="radio" name="gender" value="{{ value }}"
-                                {% if form.gender.value|stringsformat:"s" == value|stringsformat:"s" %}checked{% endif %}>
-                            {{ label }}
-                        </label>
+                        <div class="gender-inner">
+                            <label class="gender-label">
+                                <input class="gender-radio" type="radio" name="gender" value="{{ value }}"
+                                    {% if form.gender.value|stringformat:"s" == value|stringformat:"s" %}checked{% endif %}>
+                                <span class="gender-radio__mark"></span>
+                                {{ label }}
+                            </label>
+                            <div class="space">&nbsp;</div>
+                        </div>
                     {% endfor %}
                 </div>
             </div>
             <div class="top-item">
                 <div class="item-name">メールアドレス<span class="item-required">※</span></div>
-                <div class="email-wrapper">
-                    <input class="email-input" type="email" name="email"
+                <div class="email-wrapper wrapper">
+                    <input class="top-item__input" type="email" name="email"
                         value="{{ form.email.value|default:'' }}" placeholder="例:test@example.com">
                     {% if form.email.errors %}
                         <div class="error">{{ form.email.errors.0 }}</div>
                     {% else %}
-                        <div>&nbsp;</div>
+                        <div class="space">&nbsp;</div>
                     {% endif %}
                 </div>
             </div>
             <div class="top-item">
                 <div class="item-name">電話番号<span class="item-required">※</span></div>
-                <div class="tell-wrapper">
+                <div class="tell-wrapper wrapper">
                     <div class="tell-inner">
-                        <input class="tell-input" type="text" name="tell1" value="{{ form.tell1.value|default:'' }}" placeholder="080">
+                        <input class="top-item__input tell-input" type="text" name="tell1"
+                            value="{{ form.tell1.value|default:'' }}" placeholder="080">
                         {% if form.tell1.errors %}
                             <div class="error">{{ form.tell1.errors.0 }}</div>
                         {% else %}
-                            <div>&nbsp;</div>
+                            <div class="space">&nbsp;</div>
                         {% endif %}
                     </div>
-                    <div class="tell-border"></div>
+                    <div class="tell-border">-</div>
                     <div class="tell-inner">
-                        <input class="tell-input" type="text" name="tell2" value="{{ form.tell2.value|default:'' }}" placeholder="1234">
+                        <input class="top-item__input tell-input" type="text" name="tell2"
+                            value="{{ form.tell2.value|default:'' }}" placeholder="1234">
                         {% if form.tell2.errors %}
                             <div class="error">{{ form.tell2.errors.0 }}</div>
                         {% else %}
-                            <div>&nbsp;</div>
+                            <div class="space">&nbsp;</div>
                         {% endif %}
                     </div>
-                    <div class="tell-border"></div>
+                    <div class="tell-border">-</div>
                     <div class="tell-inner">
-                        <input class="tell-input" type="text" name="tell3" value="{{ form.tell3.value|default:'' }}" placeholder="5678">
+                        <input class="top-item__input tell-input" type="text" name="tell3"
+                            value="{{ form.tell3.value|default:'' }}" placeholder="5678">
                         {% if form.tell3.errors %}
                             <div class="error">{{ form.tell3.errors.0 }}</div>
                         {% else %}
-                            <div>&nbsp;</div>
+                            <div class="space">&nbsp;</div>
                         {% endif %}
                     </div>
                 </div>
             </div>
             <div class="top-item">
                 <div class="item-name">住所<span class="item-required">※</span></div>
-                <div class="address-wrapper">
-                    <input class="address-input" type="text" name="address"
+                <div class="address-wrapper wrapper">
+                    <input class="top-item__input" type="text" name="address"
                         value="{{ form.address.value|default:'' }}" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3">
                     {% if form.address.errors %}
                         <div class="error">{{ form.address.errors.0 }}</div>
                     {% else %}
-                        <div>&nbsp;</div>
+                        <div class="space">&nbsp;</div>
                     {% endif %}
                 </div>
             </div>
             <div class="top-item">
                 <div class="item-name">建物名</div>
-                <div class="building-wrapper">
-                    <input class="building-input" type="text" name="building"
+                <div class="building-wrapper wrapper">
+                    <input class="top-item__input" type="text" name="building"
                         value="{{ form.building.value|default:'' }}" placeholder="例:千駄ヶ谷マンション101">
-                    <div>&nbsp;</div>
+                    <div class="space">&nbsp;</div>
                 </div>
             </div>
             <div class="top-item">
                 <div class="item-name">お問い合わせの種類<span class="item-required">※</span></div>
-                <div class="category-wrapper">
+                <div class="category-wrapper wrapper">
                     <select class="category-select" name="category">
                         <option value="" hidden>選択してください</option>
                         {% for value, label in category_choices %}
-                            <option value="{{ label }}"
-                                {% if form.category.value|stringsformat:"s" == value|stringsformat:"s" %}selected{% endif %}>
+                            <option value="{{ value }}"
+                                {% if form.category.value|stringformat:"s" == value|stringformat:"s" %}selected{% endif %}>
                                 {{ label }}
                             </option>
                         {% endfor %}
@@ -124,19 +131,19 @@
                     {% if form.category.errors %}
                         <div class="error">{{ form.category.errors.0 }}</div>
                     {% else %}
-                        <div>&nbsp;</div>
+                        <div class="space">&nbsp;</div>
                     {% endif %}
                 </div>
             </div>
             <div class="top-item">
                 <div class="item-name">お問い合わせ内容<span class="item-required">※</span></div>
-                <div class="detail-wrapper">
-                    <textarea class="detail-input" name="detail" cols="30" rows="10"
+                <div class="detail-wrapper wrapper">
+                    <textarea class="top-item__input" name="detail" cols="30" rows="5"
                         placeholder="お問い合わせ内容をご記載ください">{{ form.detail.value|default:'' }}</textarea>
                     {% if form.detail.errors %}
                         <div class="error">{{ form.detail.errors.0 }}</div>
                     {% else %}
-                        <div>&nbsp;</div>
+                        <div class="space">&nbsp;</div>
                     {% endif %}
                 </div>
             </div>

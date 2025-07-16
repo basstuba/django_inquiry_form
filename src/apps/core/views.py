@@ -9,6 +9,14 @@ GENDER_DISPLAY = {
     "3": "未回答"
 }
 
+CATEGORY_DISPLAY = {
+    "1": "商品のお届けについて",
+    "2": "商品の交換について",
+    "3": "商品トラブル",
+    "4": "ショップへのお問い合わせ",
+    "5": "その他"
+}
+
 # css記述が終了したらコメントアウト解除
 # @require_http_methods(["GET", "POST"])
 def top_view(request):
@@ -16,9 +24,11 @@ def top_view(request):
         form = CreateInquiryForm(request.POST)
         if form.is_valid(): # 保存せずにそのまま確認画面へ
             gender_label = GENDER_DISPLAY.get(form.cleaned_data['gender'])
+            category_label = CATEGORY_DISPLAY.get(form.cleaned_data['category'])
             context = {
                 'form': form,
                 'gender_label': gender_label,
+                'category_label': category_label,
             }
             return render(request, 'core/confirm.html', context)
     else:
