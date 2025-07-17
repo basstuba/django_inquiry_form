@@ -1,8 +1,15 @@
-<form action="{% url 'action_url' %}" method="POST">
+<form action="{% url action_url %}" method="POST">
     {% csrf_token %}
-    {% for hidden in form.hidden_fields %}
-        {{ hidden }}
-    {% endfor %}
-    <input type="hidden" name="tell" value="{{ form.cleaned_data.tell }}">
+    <input type="hidden" name="last_name" value="{{ form.cleaned_data.last_name }}">
+    <input type="hidden" name="first_name" value="{{ form.cleaned_data.first_name }}">
+    <input type="hidden" name="gender" value="{{ form.cleaned_data.gender }}">
+    <input type="hidden" name="email" value="{{ form.cleaned_data.email }}">
+    <input type="hidden" name="tell1" value="{{ form.cleaned_data.tell1 }}">
+    <input type="hidden" name="tell2" value="{{ form.cleaned_data.tell2 }}">
+    <input type="hidden" name="tell3" value="{{ form.cleaned_data.tell3 }}">
+    <input type="hidden" name="address" value="{{ form.cleaned_data.address }}">
+    <input type="hidden" name="building" value="{{ form.cleaned_data.building|default:'' }}">
+    <input type="hidden" name="category" value="{{ form.cleaned_data.category }}">
+    <input type="hidden" name="detail" value="{{ form.cleaned_data.detail }}">
     <button type="submit" class="{{ button_class }}">{{ button_label }}</button>
 </form>

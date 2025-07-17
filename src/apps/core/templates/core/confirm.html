@@ -46,18 +46,10 @@
     </table>
     <div class="button-wrapper">
         <div class="button-inner__primary">
-            {% include "core/includes/form_action.html" with
-                action_url="core:confirm"
-                button_label="送信"
-                button_class="form-button__primary"
-            %}
+            {% include "core/includes/form_action.html" with form=form action_url="core:confirm" button_label="送信" button_class="form-button__primary" %}
         </div>
         <div class="button-inner__secondary">
-            {% include "core/includes/form_action.html" with
-                action_url="core:edit"
-                button_label="修正"
-                button_class="form-button__secondary"
-            %}
+            {% include "core/includes/form_action.html" with form=form action_url="core:edit" button_label="修正" button_class="form-button__secondary" %}
         </div>
     </div>
 </div>
