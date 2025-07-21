@@ -36,8 +36,8 @@ def top_view(request):
 
     context = {
         'form': form,
-        'gender_choices': Contact.GENDER_CHOICES,
-        'category_choices': Contact.CATEGORY_CHOICES,
+        'gender_choices': Contact.GENDER_CHOICES, #セレクトボックス用
+        'category_choices': Contact.CATEGORY_CHOICES, #セレクトボックス用
     }
     return render(request, 'core/top.html', context)
 
@@ -63,7 +63,7 @@ def edit_view(request):
     form = CreateInquiryForm(request.POST)
     context = {
         'form': form,
-        'gender_choices': Contact.GENDER_CHOICES,
-        'category_choices': Contact.CATEGORY_CHOICES,
+        'gender_choices': Contact.GENDER_CHOICES, #セレクトボックス用
+        'category_choices': Contact.CATEGORY_CHOICES, #セレクトボックス用
     }
     return render(request, 'core/top.html', context)

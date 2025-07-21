@@ -5,6 +5,18 @@ from ..models import User
 
 
 class BaseUserCreationForm(forms.ModelForm):
+    last_name = forms.CharField(
+        label="姓",
+        error_messages={
+            'required': '姓を入力してください。',
+        },
+    )
+    first_name = forms.CharField(
+        label="名",
+        error_messages={
+            'required': '名を入力してください。',
+        },
+    )
     email = forms.EmailField(
         label="メールアドレス",
         error_messages={

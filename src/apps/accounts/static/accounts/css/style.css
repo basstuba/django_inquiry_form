@@ -77,6 +77,16 @@ main {
     }
 }
 
+.username-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.username-item {
+    width: 45%;
+}
+
 .auth-item__input {
     width: 100%;
     color: #beb1a6;

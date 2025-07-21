@@ -37,3 +37,8 @@ shell:
 # Dockerコンテナのビルド
 up:
 	docker compose up -d --build
+
+# ダミーデータ作成
+.PHONY: factory
+factory:
+	$(exec) python manage.py factory

@@ -16,6 +16,29 @@
             <form class="auth-form" action="{% url 'accounts:signup' %}" method="POST">
                 {% csrf_token %}
                 <div class="auth-item">
+                    <label class="auth-item__name" for="last_name">氏名</label>
+                    <div class="username-wrapper">
+                        <div class="username-item">
+                            <input class="auth-item__input" type="text" name="last_name" id="last_name"
+                                value="{{ form.last_name.value|default:'' }}" placeholder="例：山田">
+                            {% if form.last_name.errors %}
+                                <div class="auth-item__error">{{ form.last_name.errors.0 }}</div>
+                            {% else %}
+                                <div class="auth-item__space">&nbsp;</div>
+                            {% endif %}
+                        </div>
+                        <div class="username-item">
+                            <input class="auth-item__input" type="text" name="first_name"
+                                value="{{ form.first_name.value|default:'' }}" placeholder="例：太郎">
+                            {% if form.first_name.errors %}
+                                <div class="auth-item__error">{{ form.first_name.errors.0 }}</div>
+                            {% else %}
+                                <div class="auth-item__space">&nbsp;</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="auth-item">
                     <label class="auth-item__name" for="email">メールアドレス</label>
                     <input class="auth-item__input" type="email" name="email" id="email"
                         value="{{ form.email.value|default:'' }}" placeholder="例：test@example.com">

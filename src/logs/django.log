@@ -1,0 +1,1203 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /core/ HTTP/1.1" 200 18327
+"GET /static/css/reset.css HTTP/1.1" 304 0
+"GET /static/css/common.css HTTP/1.1" 304 0
+"GET /static/css/user_layout.css HTTP/1.1" 304 0
+"GET /static/core/css/top.css HTTP/1.1" 304 0
+Not Found: /client/admin
+"GET /client/admin HTTP/1.1" 404 11937
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 11933
+/app/config/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/app/config/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/app/config/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/app/config/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/app/config/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/app/config/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/app/config/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/app/config/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /client/admin HTTP/1.1" 301 0
+Internal Server Error: /client/admin/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/apps/client/views.py", line 26, in admin_view
+    return render(request, 'client/admin.html', context)
+  File "/usr/local/lib/python3.13/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/test/utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete' with no arguments not found. 1 pattern(s) tried: ['client/delete/(?P<contact_id>[0-9]+)\\Z']
+"GET /client/admin/ HTTP/1.1" 500 186232
+"GET /client/admin/ HTTP/1.1" 200 48922
+"GET /static/css/admin_layout.css HTTP/1.1" 304 0
+"GET /static/client/css/admin.css HTTP/1.1" 200 0
+"GET /client/admin/ HTTP/1.1" 200 53028
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/client/css/admin.css HTTP/1.1" 200 81
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /static/client/css/admin.css HTTP/1.1" 200 133
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53027
+"GET /static/client/css/admin.css HTTP/1.1" 200 139
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 240
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/client/css/admin.css HTTP/1.1" 200 240
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 237
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 237
+"GET /static/client/css/admin.css HTTP/1.1" 200 239
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 385
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 401
+"GET /client/admin/ HTTP/1.1" 200 53027
+"GET /static/client/css/admin.css HTTP/1.1" 200 423
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 423
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 440
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 453
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53027
+"GET /static/client/css/admin.css HTTP/1.1" 200 457
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 680
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 679
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 702
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 685
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 1113
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 1113
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 1113
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 1113
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 1113
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 1109
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 1109
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 1109
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 1109
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 1109
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 1109
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 1109
+"GET /client/admin/ HTTP/1.1" 200 53026
+"GET /static/client/css/admin.css HTTP/1.1" 200 1109
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1170
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1122
+Watching for file changes with StatReloader
+"GET /core/ HTTP/1.1" 200 18327
+"GET /static/core/css/top.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+"GET /static/css/user_layout.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+"GET /client/admin/ HTTP/1.1" 200 53110
+"GET /static/client/css/admin.css HTTP/1.1" 200 1072
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/client/css/admin.css HTTP/1.1" 200 1110
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1090
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1218
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/client/css/admin.css HTTP/1.1" 200 1218
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/client/css/admin.css HTTP/1.1" 200 1218
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/ HTTP/1.1" 200 53108
+"GET /static/client/css/admin.css HTTP/1.1" 200 1221
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/client/css/admin.css HTTP/1.1" 200 1221
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/ HTTP/1.1" 200 53107
+"GET /static/client/css/admin.css HTTP/1.1" 200 1267
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/client/css/admin.css HTTP/1.1" 200 1267
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/ HTTP/1.1" 200 53107
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/client/css/admin.css HTTP/1.1" 200 1289
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1289
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1267
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1240
+"GET /client/admin/ HTTP/1.1" 200 53107
+"GET /static/client/css/admin.css HTTP/1.1" 200 1221
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1218
+"GET /client/admin/ HTTP/1.1" 200 53107
+"GET /static/client/css/admin.css HTTP/1.1" 200 1218
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1464
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1464
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1463
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1775
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1776
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1773
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1794
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1910
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1941
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1943
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1943
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 1964
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2133
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2158
+"GET /client/admin/ HTTP/1.1" 200 53108
+"GET /static/client/css/admin.css HTTP/1.1" 200 2158
+"GET /client/admin/ HTTP/1.1" 200 53107
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53107
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2156
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2249
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2269
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2408
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2426
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2426
+"GET /client/admin/ HTTP/1.1" 200 53106
+"GET /static/client/css/admin.css HTTP/1.1" 200 2464
+"GET /client/admin/?page=2 HTTP/1.1" 200 53576
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=1 HTTP/1.1" 200 53113
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=2 HTTP/1.1" 200 53576
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=2 HTTP/1.1" 200 54194
+"GET /static/client/css/admin.css HTTP/1.1" 200 2469
+"GET /client/admin/?page=2 HTTP/1.1" 200 54192
+"GET /static/client/css/admin.css HTTP/1.1" 200 3074
+"GET /client/admin/?page=1 HTTP/1.1" 200 53791
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=2 HTTP/1.1" 200 54192
+"GET /static/client/css/admin.css HTTP/1.1" 200 3086
+"GET /client/admin/?page=1 HTTP/1.1" 200 53791
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=2 HTTP/1.1" 200 54193
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=1 HTTP/1.1" 200 53791
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=1 HTTP/1.1" 200 53791
+"GET /static/client/css/admin.css HTTP/1.1" 200 3089
+"GET /client/admin/?page=1 HTTP/1.1" 200 53791
+"GET /static/client/css/admin.css HTTP/1.1" 200 3089
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53793
+"GET /static/client/css/admin.css HTTP/1.1" 200 3090
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53791
+"GET /static/client/css/admin.css HTTP/1.1" 200 3089
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53791
+"GET /static/client/css/admin.css HTTP/1.1" 200 3090
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53791
+"GET /static/client/css/admin.css HTTP/1.1" 200 3090
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53979
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=2 HTTP/1.1" 200 54380
+"GET /client/admin/?page=6 HTTP/1.1" 200 54587
+"GET /client/admin/?page=2 HTTP/1.1" 200 54380
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=1 HTTP/1.1" 200 53979
+"GET /client/admin/?page=1 HTTP/1.1" 200 53979
+"GET /client/admin/?page=2 HTTP/1.1" 200 54380
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=3 HTTP/1.1" 200 54128
+"GET /client/admin/?page=4 HTTP/1.1" 200 54310
+"GET /client/admin/?page=5 HTTP/1.1" 200 54093
+"GET /client/admin/?page=6 HTTP/1.1" 200 54398
+"GET /client/admin/?page=7 HTTP/1.1" 200 53801
+"GET /client/admin/?page=8 HTTP/1.1" 200 31401
+"GET /client/admin/?page=6 HTTP/1.1" 200 54398
+"GET /client/admin/?page=5 HTTP/1.1" 200 54093
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=4 HTTP/1.1" 200 54310
+"GET /client/admin/?page=2 HTTP/1.1" 200 54380
+"GET /client/admin/?page=1 HTTP/1.1" 200 53979
+"GET /client/admin/?page=2 HTTP/1.1" 200 54380
+"GET /client/admin/?page=3 HTTP/1.1" 200 54128
+"GET /client/admin/?page=4 HTTP/1.1" 200 54310
+"GET /client/admin/?page=6 HTTP/1.1" 200 54398
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=5 HTTP/1.1" 200 54093
+"GET /client/admin/?page=4 HTTP/1.1" 200 54310
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=3 HTTP/1.1" 200 54128
+"GET /client/admin/?page=2 HTTP/1.1" 200 54380
+"GET /client/admin/?page=1 HTTP/1.1" 200 53979
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+Watching for file changes with StatReloader
+"GET /core/ HTTP/1.1" 200 18326
+"GET /client/admin/ HTTP/1.1" 200 53970
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/ HTTP/1.1" 200 53966
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/client/css/admin.css HTTP/1.1" 200 3124
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3142
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/client/css/admin.css HTTP/1.1" 200 3142
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3190
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3234
+"GET /client/admin/ HTTP/1.1" 200 53967
+"GET /static/client/css/admin.css HTTP/1.1" 200 3216
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3254
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 53967
+"GET /static/client/css/admin.css HTTP/1.1" 200 3272
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3285
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3330
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3330
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3453
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3451
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3486
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3489
+"GET /client/admin/ HTTP/1.1" 200 53967
+"GET /static/client/css/admin.css HTTP/1.1" 200 3487
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3491
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3495
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3495
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3504
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3617
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3637
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3635
+"GET /client/admin/ HTTP/1.1" 200 53966
+"GET /static/client/css/admin.css HTTP/1.1" 200 3635
+"GET /client/admin/?page=2 HTTP/1.1" 200 54374
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=3 HTTP/1.1" 200 54122
+"GET /client/admin/?page=5 HTTP/1.1" 200 54087
+"GET /client/admin/?page=8 HTTP/1.1" 200 31395
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=7 HTTP/1.1" 200 53795
+"GET /client/admin/?page=6 HTTP/1.1" 200 54392
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=5 HTTP/1.1" 200 54087
+"GET /client/admin/?page=4 HTTP/1.1" 200 54304
+"GET /client/admin/?page=3 HTTP/1.1" 200 54122
+"GET /client/admin/?page=2 HTTP/1.1" 200 54374
+"GET /client/admin/?page=1 HTTP/1.1" 200 53974
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 3666
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 3697
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/client/css/admin.css HTTP/1.1" 200 3722
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 3697
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 3896
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/client/css/admin.css HTTP/1.1" 200 3896
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 3896
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/client/css/admin.css HTTP/1.1" 200 3896
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 3896
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 3873
+"GET /client/admin/?page=1 HTTP/1.1" 200 53975
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/client/css/admin.css HTTP/1.1" 200 3940
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4014
+"GET /client/admin/?page=1 HTTP/1.1" 200 53974
+"GET /static/client/css/admin.css HTTP/1.1" 200 4014
+"GET /client/admin/?page=1 HTTP/1.1" 200 53974
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/client/css/admin.css HTTP/1.1" 200 4014
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4014
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4098
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4180
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4202
+"GET /client/admin/?page=1 HTTP/1.1" 200 53975
+"GET /static/client/css/admin.css HTTP/1.1" 200 4222
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4222
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4350
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4366
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53974
+"GET /static/client/css/admin.css HTTP/1.1" 200 4398
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4422
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4440
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4441
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4441
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4441
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4424
+"GET /client/admin/?page=1 HTTP/1.1" 200 53974
+"GET /static/client/css/admin.css HTTP/1.1" 200 4423
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4423
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4448
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4498
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4545
+"GET /client/admin/?page=1 HTTP/1.1" 200 53974
+"GET /static/client/css/admin.css HTTP/1.1" 200 4685
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4685
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4685
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4685
+"GET /client/admin/?page=1 HTTP/1.1" 200 53973
+"GET /static/client/css/admin.css HTTP/1.1" 200 4716
+"GET /client/admin/?page=1 HTTP/1.1" 200 54896
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 200 2732
+"GET /client/admin/?page=1 HTTP/1.1" 200 54893
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 304 0
+"GET /client/admin/?page=1 HTTP/1.1" 200 54893
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 200 2732
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/client/css/admin.css HTTP/1.1" 200 4565
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/?page=1 HTTP/1.1" 200 54893
+"GET /static/client/css/admin.css HTTP/1.1" 200 4614
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 304 0
+"GET /client/admin/?page=1 HTTP/1.1" 200 54893
+"GET /static/client/css/admin.css HTTP/1.1" 200 4630
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 304 0
+"GET /client/admin/?page=1 HTTP/1.1" 200 54893
+"GET /static/client/css/admin.css HTTP/1.1" 200 4630
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=1 HTTP/1.1" 200 54894
+"GET /static/client/css/admin.css HTTP/1.1" 200 4629
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 304 0
+"GET /client/admin/?page=1 HTTP/1.1" 200 54893
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 304 0
+"GET /static/client/css/admin.css HTTP/1.1" 200 4666
+"GET /client/admin/?page=1 HTTP/1.1" 200 54893
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/client/css/admin.css HTTP/1.1" 200 4666
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 200 2732
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/?page=1 HTTP/1.1" 200 54893
+"GET /static/client/css/admin.css HTTP/1.1" 200 4666
+"GET /client/admin/?page=1 HTTP/1.1" 200 54893
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 304 0
+"GET /static/client/css/admin.css HTTP/1.1" 200 4666
+"GET /client/admin/?page=1 HTTP/1.1" 200 54893
+"GET /static/client/css/admin.css HTTP/1.1" 200 4666
+"GET /client/admin/?page=1 HTTP/1.1" 200 54893
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 304 0
+"GET /static/client/css/admin.css HTTP/1.1" 200 4666
+"GET /client/admin/?page=1 HTTP/1.1" 200 54894
+"GET /static/client/css/admin.css HTTP/1.1" 200 4666
+"GET /client/admin/?page=1 HTTP/1.1" 200 54893
+"GET /static/client/css/admin.css HTTP/1.1" 200 4666
+Watching for file changes with StatReloader
+"GET /core/ HTTP/1.1" 200 18327
+"GET /static/css/user_layout.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+"GET /static/core/css/top.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+"GET /client/admin/ HTTP/1.1" 200 54888
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/client/css/admin.css HTTP/1.1" 200 4889
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 200 2732
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 200 4909
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 200 5043
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 200 5086
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 200 5220
+"GET /client/admin/ HTTP/1.1" 200 54887
+"GET /static/client/css/admin.css HTTP/1.1" 200 5241
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 200 5243
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 200 5245
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 200 5245
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 200 5245
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 200 5266
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 200 5329
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 200 5371
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 200 5392
+"GET /client/admin/?page=2 HTTP/1.1" 200 55294
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=3 HTTP/1.1" 200 55042
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=4 HTTP/1.1" 200 55224
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=5 HTTP/1.1" 200 55007
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=6 HTTP/1.1" 200 55312
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=7 HTTP/1.1" 200 54715
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=8 HTTP/1.1" 200 31788
+"POST /client/delete/1 HTTP/1.1" 302 0
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=5 HTTP/1.1" 200 55007
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=8 HTTP/1.1" 200 26828
+"GET /client/admin/?page=6 HTTP/1.1" 200 55312
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/?page=4 HTTP/1.1" 200 55224
+"GET /client/admin/?page=2 HTTP/1.1" 200 55294
+"GET /client/admin/?page=1 HTTP/1.1" 200 54893
+"GET /client/search/?keyword=%E6%96%89%E8%97%A4&gender=&category=&created_at= HTTP/1.1" 200 31683
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/search/?keyword=&gender=&category=&created_at= HTTP/1.1" 200 54939
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/search/?keyword=%E9%A6%99&gender=&category=&created_at= HTTP/1.1" 200 26741
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /client/search/?keyword=&gender=1&category=&created_at= HTTP/1.1" 200 54694
+"GET /client/search/?page=3 HTTP/1.1" 200 55044
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/search/?page=7 HTTP/1.1" 200 54717
+"GET /client/search/?page=8 HTTP/1.1" 200 26830
+"GET /client/search/?keyword=&gender=1&category=&created_at= HTTP/1.1" 200 54694
+"GET /client/search/?page=2 HTTP/1.1" 200 55296
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/ HTTP/1.1" 200 54886
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 304 0
+"GET /client/search/?keyword=&gender=1&category=&created_at= HTTP/1.1" 200 54862
+"GET /client/search/?page=2&keyword=&gender=1&category=&created_at= HTTP/1.1" 200 54803
+"GET /client/search/?page=3&keyword=&gender=1&category=&created_at= HTTP/1.1" 200 54300
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /client/admin/?page=5 HTTP/1.1" 200 55007
+"GET /client/admin/?page=8 HTTP/1.1" 200 26828
+"GET /client/search/?keyword=&gender=2&category=&created_at= HTTP/1.1" 200 54731
+"GET /client/search/?page=2&keyword=&gender=2&category=&created_at= HTTP/1.1" 200 54651
+"GET /client/search/?page=3&keyword=&gender=2&category=&created_at= HTTP/1.1" 200 32692
+"GET /client/search/?keyword=&gender=3&category=&created_at= HTTP/1.1" 200 54499
+"GET /client/search/?page=2&keyword=&gender=3&category=&created_at= HTTP/1.1" 200 49414
+"GET /client/search/?page=1&keyword=&gender=3&category=&created_at= HTTP/1.1" 200 54510
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /client/search/?keyword=&gender=&category=1&created_at= HTTP/1.1" 200 54801
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/search/?page=3&keyword=&gender=&category=1&created_at= HTTP/1.1" 200 26793
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /client/search/?keyword=&gender=&category=&created_at=2025-07-20 HTTP/1.1" 200 15802
+"GET /client/search/?keyword=&gender=&category=&created_at=2025-07-19 HTTP/1.1" 200 55294
+"GET /client/search/?page=5&keyword=&gender=&category=&created_at=2025-07-19 HTTP/1.1" 200 55549
+"GET /client/search/?page=8&keyword=&gender=&category=&created_at=2025-07-19 HTTP/1.1" 200 22155
+"GET /client/search/?page=7&keyword=&gender=&category=&created_at=2025-07-19 HTTP/1.1" 200 55127
+"GET /client/search/?page=6&keyword=&gender=&category=&created_at=2025-07-19 HTTP/1.1" 200 55789
+"GET /client/search/?page=5&keyword=&gender=&category=&created_at=2025-07-19 HTTP/1.1" 200 55549
+"GET /client/search/?page=4&keyword=&gender=&category=&created_at=2025-07-19 HTTP/1.1" 200 55831
+"GET /client/search/?page=3&keyword=&gender=&category=&created_at=2025-07-19 HTTP/1.1" 200 55649
+"GET /client/search/?page=1&keyword=&gender=&category=&created_at=2025-07-19 HTTP/1.1" 200 55305
+"GET /client/search/?keyword=&gender=&category=&created_at=2025-07-18 HTTP/1.1" 200 15802
+"GET /client/search/?keyword=&gender=&category=&created_at=2025-07-17 HTTP/1.1" 200 20757
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /client/search/?keyword=&gender=2&category=3&created_at= HTTP/1.1" 200 37770
+"GET /client/admin/ HTTP/1.1" 200 54886
+"GET /client/export/?keyword=&gender=&category=&created_at= HTTP/1.1" 200 34498
+"GET /client/search/?keyword=&gender=3&category=&created_at= HTTP/1.1" 200 54499
+"GET /client/export/?keyword=&gender=3&category=&created_at= HTTP/1.1" 200 9230
+"GET /client/search/?page=2&keyword=&gender=3&category=&created_at= HTTP/1.1" 200 49414
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /client/admin/ HTTP/1.1" 200 54886
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/client/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /core/ HTTP/1.1" 200 18325
+"GET /accounts/login/ HTTP/1.1" 200 11949
+"GET /static/accounts/css/style.css HTTP/1.1" 304 0
+"GET /accounts/signup/ HTTP/1.1" 200 12396
+"POST /accounts/signup/ HTTP/1.1" 200 12437
+"GET /accounts/login/ HTTP/1.1" 200 11949
+"GET /accounts/signup/ HTTP/1.1" 200 12394
+"POST /accounts/signup/ HTTP/1.1" 200 12517
+"POST /accounts/signup/ HTTP/1.1" 200 12517
+"GET /accounts/login/ HTTP/1.1" 200 11947
+"POST /accounts/login/ HTTP/1.1" 200 11972
+"GET /__debug__/render_panel/?store_id=fde91b4a92d04a2eae0f8660fd6f1360&panel_id=HistoryPanel HTTP/1.1" 200 18948
+"GET /accounts/signup/ HTTP/1.1" 200 12396
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /accounts/login/ HTTP/1.1" 200 11949
+"GET /static/css/admin_layout.css HTTP/1.1" 304 0
+"GET /static/css/common.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+"GET /static/accounts/css/style.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /accounts/signup/ HTTP/1.1" 200 13259
+"GET /accounts/signup/ HTTP/1.1" 200 13250
+"GET /accounts/signup/ HTTP/1.1" 200 13248
+"GET /static/css/common.css HTTP/1.1" 200 828
+"GET /static/css/reset.css HTTP/1.1" 200 2512
+"GET /static/css/admin_layout.css HTTP/1.1" 200 1142
+"GET /static/accounts/css/style.css HTTP/1.1" 200 1916
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /accounts/signup/ HTTP/1.1" 200 13383
+"GET /static/accounts/css/style.css HTTP/1.1" 304 0
+"POST /accounts/signup/ HTTP/1.1" 200 13571
+"GET /static/accounts/css/style.css HTTP/1.1" 304 0
+"POST /accounts/signup/ HTTP/1.1" 200 13570
+"GET /static/accounts/css/style.css HTTP/1.1" 304 0
+"GET /accounts/signup/ HTTP/1.1" 200 13381
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+/app/apps/accounts/forms/base_forms.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /accounts/login/ HTTP/1.1" 200 11949
+"GET /static/accounts/css/style.css HTTP/1.1" 304 0
+"GET /accounts/signup/ HTTP/1.1" 200 13383
+"POST /accounts/signup/ HTTP/1.1" 200 13559
+Internal Server Error: /accounts/signup/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/views/decorators/http.py", line 43, in inner
+    return func(request, *args, **kwargs)
+  File "/app/apps/accounts/views.py", line 39, in signup_view
+    return redirect('accounts:login_view')
+  File "/usr/local/lib/python3.13/site-packages/django/shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/usr/local/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login_view' not found. 'login_view' is not a valid view function or pattern name.
+"POST /accounts/signup/ HTTP/1.1" 500 95073
+/app/apps/accounts/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /accounts/signup/ HTTP/1.1" 302 0
+"GET /accounts/login/ HTTP/1.1" 200 11947
+"GET /static/accounts/css/style.css HTTP/1.1" 304 0
+"GET /accounts/signup/ HTTP/1.1" 200 13381
+"GET /accounts/login/ HTTP/1.1" 200 11947
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET /client/admin/ HTTP/1.1" 200 55161
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 304 0
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 12188
+"GET /client/admin/?page=2 HTTP/1.1" 200 55569
+"GET /client/admin/?page=1 HTTP/1.1" 200 55168
+"GET /client/admin/?page=2 HTTP/1.1" 200 55569
+"GET /client/admin/?page=3 HTTP/1.1" 200 55317
+"GET /client/admin/?page=4 HTTP/1.1" 200 55499
+"GET /client/admin/?page=3 HTTP/1.1" 200 55317
+"GET /client/admin/?page=2 HTTP/1.1" 200 55569
+"GET /client/admin/?page=1 HTTP/1.1" 200 55168
+"POST /accounts/logout/ HTTP/1.1" 302 0
+"GET /accounts/login/ HTTP/1.1" 200 11947
+"GET /accounts/signup/ HTTP/1.1" 200 13381
+"GET /accounts/login/ HTTP/1.1" 200 11947

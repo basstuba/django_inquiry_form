@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('core/', include('apps.core.urls')),
     path('accounts/', include('apps.accounts.urls')),
+    path('client/', include('apps.client.urls')),
     # path('', lambda request: redirect('accounts:login')),
 ]
 

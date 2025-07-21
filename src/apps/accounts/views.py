@@ -15,7 +15,7 @@ def login_view(request):
             user = authenticate(request, email=email, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('core:top') # 遷移先はクライアント用管理画面に変更する
+                return redirect('client:admin') # 遷移先はクライアント用管理画面
             else:
                 form.add_error(None, "メールアドレスまたはパスワードが違います。")
     else:
@@ -36,7 +36,7 @@ def signup_view(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('accounts:login_view')
+            return redirect('accounts:login')
     else:
         form = RegisterForm()
 

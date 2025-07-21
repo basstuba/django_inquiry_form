@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'apps.core',
     'apps.accounts',
+    'apps.client',
 ]
 
 AUTH_USER_MODEL = 'accounts.User' # 認証用モデルをカスタムユーザーモデルに設定
@@ -148,3 +149,26 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 INTERNAL_IPS = ["127.0.0.1"] + [ip[:-1] + "1" for ip in ips if ip.startswith("172.") or ip.startswith("192.")]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR / 'logs/django.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        '__main__': {
+            'handlers': ['file'],
+            'level': 'INFO',
+        },
+    },
+}

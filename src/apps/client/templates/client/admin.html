@@ -1,0 +1,178 @@
+{% extends "layouts/admin_layout.html" %}
+{% load static %}
+
+{% block extraheader %}
+    <link rel="stylesheet" href="{% static 'client/css/admin.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="admin">
+        <h2 class="admin-title">Admin</h2>
+        <div class="admin-container">
+            <div class="search-wrapper">
+                <form class="search-form" action="{% url 'client:search' %}" method="GET">
+                    <div class="keyword-wrapper">
+                        <input class="search-keyword search-input" type="text" name="keyword"
+                            value="{{ request.GET.keyword }}" placeholder="名前やメールアドレスを入力してください">
+                    </div>
+                    <div class="gender-wrapper">
+                        <select class="search-gender search-input" name="gender">
+                            <option value="" hidden>性別</option>
+                            {% for value, label in gender_choices %}
+                                <option value="{{ value }}"
+                                    {% if request.GET.gender|stringformat:"s" == value|stringformat:"s" %}selected{% endif %}>
+                                    {{ label }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="category-wrapper">
+                        <select class="search-category search-input" name="category">
+                            <option value="" hidden>お問い合わせの種類</option>
+                            {% for value, label in category_choices %}
+                                <option value="{{ value }}"
+                                    {% if request.GET.category|stringformat:"s" == value|stringformat:"s" %}selected{% endif %}>
+                                    {{ label }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="created_at-wrapper">
+                        <input class="search-created_at search-input" type="date" name="created_at"
+                            value="{{ request.GET.created_at }}">
+                    </div>
+                    <button class="search-button" type="submit">検索</button>
+                    <a class="search-reset" href="{% url 'client:admin' %}">リセット</a>
+                </form>
+            </div>
+            <div class="option">
+                <div class="export"> {# エクスポート機能 #}
+                    <form class="export-form" action="{% url 'client:export' %}" method="GET">
+                        <input type="hidden" name="keyword" value="{{ request.GET.keyword }}">
+                        <input type="hidden" name="gender" value="{{ request.GET.gender }}">
+                        <input type="hidden" name="category" value="{{ request.GET.category }}">
+                        <input type="hidden" name="created_at" value="{{ request.GET.created_at }}">
+                        <button class="export-button" type="submit">エクスポート</button>
+                    </form>
+                </div>
+                <div class="pagination"> {# ページネーション機能 #}
+                    <ul class="pagination-list">
+                        {% if contacts.has_previous %}
+                            <li><a href="?page={{ contacts.previous_page_number }}{{ get_params }}">&lt;</a></li>
+                        {% else %}
+                            <li class="disabled"><span>&lt;</span></li>
+                        {% endif %}
+
+                        {% for num in contacts.paginator.page_range %}
+                            {% if contacts.number == num %}
+                                <li class="active"><span>{{ num }}</span></li>
+                            {% elif num >= contacts.number|add:'-2' and num <= contacts.number|add:'4' %}
+                                <li><a href="?page={{ num }}{{ get_params }}">{{ num }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+
+                        {% if contacts.has_next %}
+                            <li><a href="?page={{ contacts.next_page_number }}{{ get_params }}">&gt;</a></li>
+                        {% else %}
+                            <li class="disabled"><span>&gt;</span></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <table class="list-table">
+                <thead class="list-header">
+                    <tr class="list-title">
+                        <th class="list-title__name">お名前</th>
+                        <th class="list-title__name">性別</th>
+                        <th class="list-title__name">メールアドレス</th>
+                        <th class="list-title__name">お問い合わせの種類</th>
+                        <th class="list-title__name">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody class="list-content">
+                    {% for contact in contacts %}
+                        <tr class="list-item">
+                            <td class="item-value">{{ contact.last_name }}&nbsp;{{ contact.first_name }}</td>
+                            <td class="item-value">{{ contact.get_gender_display }}</td>
+                            <td class="item-value">{{ contact.email }}</td>
+                            <td class="item-value">{{ contact.get_category_display }}</td>
+                            <td class="item-value">
+                                <button class="modal-button__show" popovertarget="modal-{{ contact.id }}"
+                                    popovertargetaction="show">
+                                    詳細
+                                </button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% for contact in contacts %}
+                <div class="modal-container" id="modal-{{ contact.id }}" popover="auto">
+                    <div class="modal-inner">
+                        <button class="modal-button__close" popovertarget="modal-{{ contact.id }}" popovertargetaction="hidden">
+                            <img src="{% static 'client/img/close_button_icon.png' %}" alt="クローズボタン">
+                        </button>
+                        <table class="modal-table">
+                            <tbody class="modal-content">
+                                <tr class="modal-item">
+                                    <th class="modal-item__name">お名前</th>
+                                    <td class="modal-item__value">{{ contact.last_name }}&nbsp;{{ contact.first_name }}</td>
+                                </tr>
+                                <tr class="modal-item">
+                                    <th class="modal-item__name">性別</th>
+                                    <td class="modal-item__value">{{ contact.get_gender_display }}</td>
+                                </tr>
+                                <tr class="modal-item">
+                                    <th class="modal-item__name">メールアドレス</th>
+                                    <td class="modal-item__value">{{ contact.email }}</td>
+                                </tr>
+                                <tr class="modal-item">
+                                    <th class="modal-item__name">電話番号</th>
+                                    <td class="modal-item__value">{{ contact.tell }}</td>
+                                </tr>
+                                <tr class="modal-item">
+                                    <th class="modal-item__name">住所</th>
+                                    <td class="modal-item__value">{{ contact.address }}</td>
+                                </tr>
+                                <tr class="modal-item">
+                                    <th class="modal-item__name">建物名</th>
+                                    <td class="modal-item__value">{{ contact.building|default:'' }}</td>
+                                </tr>
+                                <tr class="modal-item">
+                                    <th class="modal-item__name">お問い合わせの種類</th>
+                                    <td class="modal-item__value">{{ contact.get_category_display }}</td>
+                                </tr>
+                                <tr class="modal-item">
+                                    <th class="modal-item__name">お問い合わせ内容</th>
+                                    <td class="modal-item__value">{{ contact.detail }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="delete-container">
+                            <button class="delete-button__show" popovertarget="delete-{{ contact.id }}"
+                                popovertargetaction="show">
+                                削除
+                            </button>
+                            <div class="delete-content" id="delete-{{ contact.id }}" popover="auto">
+                                <div class="delete-inner">
+                                    <div class="delete-item">
+                                        <form class="delete-form"
+                                            action="{% url 'client:delete' contact.id %}" method="POST">
+                                            {% csrf_token %}
+                                            <p class="delete-message">本当に削除しますか？</p>
+                                            <button class="delete-button" type="submit">削除する</button>
+                                        </form>
+                                    </div>
+                                    <button class="delete-button__cancel" popovertarget="delete-{{ contact.id }}"
+                                        popovertargetaction="hidden">
+                                        キャンセル
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
