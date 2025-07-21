@@ -1,14 +1,53 @@
-# Django × docker × mysql の雛形
+# クライアント用管理画面付お問い合わせフォーム
+
+## アプリケーション概要
+
+Laravelを学習した際に作成した課題を学習のアウトプットのためにDjangoで作成した
+
+## アプリケーションURL
+
+ユーザー用トップページ
+```
+http://localhost:8000/core/
+```
+クライアント用ログイン画面
+```
+http://localhost:8000/accounts/login/
+```
+管理者用ログイン画面
+```
+http://localhost:8000/admin/
+```
+
+## 機能一覧
+
+### クライアントが利用可能な機能
+
+- クライアント管理者新規登録機能
+
+- ログイン及びログアウト機能
+
+- お問い合わせ検索機能
+
+- お問い合わせエクスポート機能
+
+- お問い合わせ削除機能
+
+- ページネーション機能
+
+### ユーザーが利用可能な機能
+
+- お問い合わせ登録機能
 
 ## 使用方法
 
 1. 任意のディレクトリにクローン作成
     ```
-    git clone git@github.com:basstuba/Django_sample.git
+    git clone git@github.com:basstuba/django_inquiry_form.git
     ```
 2. リポジトリ名変更
     ```
-    mv Django_sample 新しいリポジトリ名
+    mv django_inquiry_form 新しいリポジトリ名
     ```
 3. .env作成
     ```
@@ -24,7 +63,27 @@
     ```
 6. 作成したシークレットキーを.envのSECRET_KEYの値にコピペ
 
-## ローカル環境に仮想環境を作成（VS Code の補完・警告解消の用のため任意）
+7. マイグレーションファイル作成
+    ```
+    make makemigrations
+    ```
+
+8. マイグレーション
+    ```
+    make migrate
+    ```
+
+9. ダミーデータ作成（任意）
+    ```
+    make factory
+    ```
+
+10. 管理者用アカウント作成（任意）
+    ```
+    make createsuperuser
+    ```
+
+## ローカル環境に仮想環境を作成（VS Code の補完・警告解消用のため任意）
 
 1. 下記のコマンドで作成
     ```
@@ -37,6 +96,4 @@
 - Makefile参照
 
 ## その他
-- アプリの追加はsrc/appsにする
-- アプリ追加後、settings.pyのINSTALLED_APPSに'apps.core',のように追記
-- アプリ追加後、アプリ/apps.pyのnameも'apps.core'のようにsettings.pyのINSTALLED_APPSと揃える
+- ダミーデータは50件作成することができます
