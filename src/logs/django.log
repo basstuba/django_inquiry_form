@@ -1201,3 +1201,30 @@ Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /accounts/login/ HTTP/1.1" 200 11947
 "GET /accounts/signup/ HTTP/1.1" 200 13381
 "GET /accounts/login/ HTTP/1.1" 200 11947
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /core/ HTTP/1.1" 200 18325
+"GET /static/css/reset.css HTTP/1.1" 304 0
+"GET /static/css/user_layout.css HTTP/1.1" 304 0
+"GET /static/css/common.css HTTP/1.1" 304 0
+"GET /static/core/css/top.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13578
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 12040
+"GET /accounts/login/ HTTP/1.1" 200 11949
+"GET /static/css/admin_layout.css HTTP/1.1" 304 0
+"GET /static/accounts/css/style.css HTTP/1.1" 200 1916
+"GET /accounts/signup/ HTTP/1.1" 200 13383
+"GET /accounts/login/ HTTP/1.1" 200 11947
+"POST /accounts/login/ HTTP/1.1" 200 11973
+"POST /accounts/login/ HTTP/1.1" 200 12031
+"POST /accounts/login/ HTTP/1.1" 200 11967
+"POST /accounts/login/ HTTP/1.1" 302 0
+"GET /client/admin/ HTTP/1.1" 200 55162
+"GET /static/client/css/admin.css HTTP/1.1" 304 0
+"GET /static/client/img/close_button_icon.png HTTP/1.1" 304 0
+"POST /accounts/logout/ HTTP/1.1" 302 0
+"GET /accounts/login/ HTTP/1.1" 200 11947
